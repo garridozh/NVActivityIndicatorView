@@ -44,8 +44,7 @@ enum NVActivityIndicatorShape {
     func layerWith(size: CGSize, color: UIColor) -> CALayer {
         let layer: CAShapeLayer = CAShapeLayer()
         var path: UIBezierPath = UIBezierPath()
-        let lineWidth: CGFloat = 2
-
+        var lineWidth: CGFloat = 8
         switch self {
         case .circle:
             path.addArc(withCenter: CGPoint(x: size.width / 2, y: size.height / 2),
@@ -115,7 +114,7 @@ enum NVActivityIndicatorShape {
                         clockwise: false)
             layer.fillColor = nil
             layer.strokeColor = color.cgColor
-            layer.lineWidth = 2
+            layer.lineWidth = lineWidth
         case .rectangle:
             path.move(to: CGPoint(x: 0, y: 0))
             path.addLine(to: CGPoint(x: size.width, y: 0))
@@ -151,8 +150,12 @@ enum NVActivityIndicatorShape {
                         clockwise: true)
             layer.fillColor = nil
             layer.strokeColor = color.cgColor
-            layer.lineWidth = 2
+            layer.lineWidth = lineWidth
+            print("🤬")
+        default:
+            print("ok")
         }
+        
 
         layer.backgroundColor = nil
         layer.path = path.cgPath
