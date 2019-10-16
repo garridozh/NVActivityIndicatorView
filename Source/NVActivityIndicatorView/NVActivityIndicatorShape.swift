@@ -151,9 +151,6 @@ enum NVActivityIndicatorShape {
             layer.fillColor = nil
             layer.strokeColor = color.cgColor
             layer.lineWidth = lineWidth
-            print("🤬")
-        default:
-            print("ok")
         }
         
 
