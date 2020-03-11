@@ -363,6 +363,9 @@ public final class NVActivityIndicatorView: UIView {
 
     /// Default color of activity indicator. Default value is UIColor.white.
     public static var DEFAULT_COLOR = UIColor.white
+    
+    /// Default line width
+    public static var DEFAULT_LINE_WIDTH: CGFloat = 8
 
     /// Default color of text. Default value is UIColor.white.
     public static var DEFAULT_TEXT_COLOR = UIColor.white
@@ -434,6 +437,9 @@ public final class NVActivityIndicatorView: UIView {
 
     /// Color of activity indicator view.
     @IBInspectable public var color: UIColor = NVActivityIndicatorView.DEFAULT_COLOR
+    
+    /// Line width
+    @IBInspectable public var lineWidth: CGFloat = NVActivityIndicatorView.DEFAULT_LINE_WIDTH
 
     /// Padding of activity indicator view.
     @IBInspectable public var padding: CGFloat = NVActivityIndicatorView.DEFAULT_PADDING
@@ -556,6 +562,6 @@ public final class NVActivityIndicatorView: UIView {
 
         layer.sublayers = nil
         animationRect.size = CGSize(width: minEdge, height: minEdge)
-        animation.setUpAnimation(in: layer, size: animationRect.size, color: color)
+        animation.setUpAnimation(in: layer, size: animationRect.size, color: color, lineWidth: lineWidth)
     }
 }

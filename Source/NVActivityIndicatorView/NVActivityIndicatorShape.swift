@@ -41,10 +41,10 @@ enum NVActivityIndicatorShape {
     case stroke
 
     // swiftlint:disable:next cyclomatic_complexity function_body_length
-    func layerWith(size: CGSize, color: UIColor) -> CALayer {
+    func layerWith(size: CGSize, color: UIColor, lineWidth: CGFloat = NVActivityIndicatorView.DEFAULT_LINE_WIDTH) -> CALayer {
         let layer: CAShapeLayer = CAShapeLayer()
         var path: UIBezierPath = UIBezierPath()
-        let lineWidth: CGFloat = 8
+//        let lineWidth: CGFloat = 8
         switch self {
         case .circle:
             path.addArc(withCenter: CGPoint(x: size.width / 2, y: size.height / 2),

@@ -29,7 +29,7 @@ import UIKit
 
 class NVActivityIndicatorAnimationBallRotateChase: NVActivityIndicatorAnimationDelegate {
 
-    func setUpAnimation(in layer: CALayer, size: CGSize, color: UIColor) {
+    func setUpAnimation(in layer: CALayer, size: CGSize, color: UIColor, lineWidth: CGFloat) {
         let circleSize = size.width / 5
 
         // Draw circles
